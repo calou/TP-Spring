@@ -1,4 +1,4 @@
-package com.example.mvc;
+package com.example.mvc.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 

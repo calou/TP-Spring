@@ -1,6 +1,6 @@
 package com.example.mvc.controller;
 
-import com.example.mvc.HelloMessage;
+import com.example.mvc.model.HelloMessage;
 import com.example.mvc.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,10 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -23,8 +20,7 @@ public class SerializationController {
     private HelloService helloService;
 
     @RequestMapping("/serialize")
-    public @ResponseBody
-    List<HelloMessage> serializeList() throws IOException {
+    public @ResponseBody List<HelloMessage> serializeList() throws IOException {
         HelloMessage firstMessage = new HelloMessage();
         firstMessage.setDate(new Date(110, 12, 31));
         firstMessage.setMessage("Ca a l'air de marcher!!!");
@@ -39,7 +35,7 @@ public class SerializationController {
         return messages;
     }
 
-    @RequestMapping("/serialize/{name}")
+    @RequestMapping(value = "/serialize/{name}", produces = {"application/json"})
     public @ResponseBody HelloMessage serializeMessage(@PathVariable("name") String myName) throws IOException {
         HelloMessage helloMessage = new HelloMessage();
         helloMessage.setDate(new Date());
