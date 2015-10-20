@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.spring.SomeBeanTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2015-10-21T17:44:22" hostname="T410" time="0.092">
+  <properties/>
+  <testcase name="someBeanIsUnic" classname="com.example.spring.SomeBeanTest" time="0.044"/>
+  <testcase name="allReturnsAllValues" classname="com.example.spring.SomeBeanTest" time="0.047"/>
+  <system-out><![CDATA[Creation of a SomeRepositoryImpl object :com.example.spring.repository.SomeRepositoryImpl@3e27d8fc
+PostConstruct on a SomeRepositoryImpl object : com.example.spring.repository.SomeRepositoryImpl@3e27d8fc
+Creation of a SomeService object :com.example.spring.service.SomeServiceImpl@19fd733b
+PostConstruct on a SomeServiceImpl object : com.example.spring.service.SomeServiceImpl@19fd733b
+com.example.spring.service.SomeServiceImpl@19fd733b autowired with com.example.spring.repository.SomeRepositoryImpl@3e27d8fc
+Creation of a SomeBean object : com.example.spring.bean.SomeBean@20e80bd1
+PostConstruct on a SomeBean object : com.example.spring.bean.SomeBean@20e80bd1
+com.example.spring.bean.SomeBean@20e80bd1 autowired with com.example.spring.service.SomeServiceImpl@19fd733b
+-----------------------------------------------------------------------------------------
+setUp Done
+-----------------------------------------------------------------------------------------
+Creation of a SomeRepositoryImpl object :com.example.spring.repository.SomeRepositoryImpl@6729baed
+PostConstruct on a SomeRepositoryImpl object : com.example.spring.repository.SomeRepositoryImpl@6729baed
+Creation of a SomeService object :com.example.spring.service.SomeServiceImpl@627d8c7
+PostConstruct on a SomeServiceImpl object : com.example.spring.service.SomeServiceImpl@627d8c7
+com.example.spring.service.SomeServiceImpl@627d8c7 autowired with com.example.spring.repository.SomeRepositoryImpl@6729baed
+Creation of a SomeBean object : com.example.spring.bean.SomeBean@2a0ff2e2
+PostConstruct on a SomeBean object : com.example.spring.bean.SomeBean@2a0ff2e2
+com.example.spring.bean.SomeBean@2a0ff2e2 autowired with com.example.spring.service.SomeServiceImpl@627d8c7
+-----------------------------------------------------------------------------------------
+setUp Done
+-----------------------------------------------------------------------------------------
+]]></system-out>
+  <system-err><![CDATA[oct. 21, 2015 7:44:22 PM org.springframework.context.support.ClassPathXmlApplicationContext prepareRefresh
+INFOS: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@72ac4ea5: startup date [Wed Oct 21 19:44:22 CEST 2015]; root of context hierarchy
+oct. 21, 2015 7:44:22 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFOS: Loading XML bean definitions from class path resource [application-context.xml]
+oct. 21, 2015 7:44:22 PM org.springframework.context.support.ClassPathXmlApplicationContext prepareRefresh
+INFOS: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@b3fdafa: startup date [Wed Oct 21 19:44:22 CEST 2015]; root of context hierarchy
+oct. 21, 2015 7:44:22 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFOS: Loading XML bean definitions from class path resource [application-context.xml]
+]]></system-err>
+</testsuite>

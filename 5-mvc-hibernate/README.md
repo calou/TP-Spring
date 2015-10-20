@@ -1,0 +1,3 @@
+# Exercice 5
+
+Rajouter les annotations pour définir les beans, mapper les URLs...
