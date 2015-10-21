@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+    <bean id="myRepository" class="com.example.spring.repository.SomeRepositoryImpl" init-method="postContruct"/>
+
+    <bean id="myService" class="com.example.spring.service.SomeServiceImpl"  init-method="postContruct">
+        <property name="someRepository" ref="myRepository" />
+    </bean>
+
+    <bean class="com.example.spring.bean.SomeBean"  init-method="postContruct">
+        <property name="someService" ref="myService" />
+    </bean>
+
+    <bean class="com.example.spring.bean.SomeLazyBean"  init-method="postContruct" lazy-init="true">
+        <property name="someService" ref="myService" />
+    </bean>
+
+
+</beans>
