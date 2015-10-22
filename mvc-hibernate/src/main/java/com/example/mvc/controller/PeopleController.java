@@ -24,9 +24,9 @@ public class PeopleController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public @ResponseBody boolean create(Person person) throws IOException {
+    @ResponseBody
+    public void create(Person person) throws IOException {
         peopleService.save(person);
-        return true;
     }
 
     @RequestMapping("/{id}")
