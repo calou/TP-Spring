@@ -18,5 +18,4 @@
         <property name="someService" ref="myService" />
     </bean>
 
-
 </beans>

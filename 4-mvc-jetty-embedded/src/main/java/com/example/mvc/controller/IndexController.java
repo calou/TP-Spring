@@ -25,7 +25,7 @@ public class IndexController {
     }
 
     @RequestMapping("/you")
-    public @ResponseBody String helloHost() throws IOException {
+    public @ResponseBody String helloYou() throws IOException {
         return "Hello you!";
     }
 
